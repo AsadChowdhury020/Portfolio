@@ -76,7 +76,7 @@ const Experience = () => {
                                 {experience.current && <span className='absolute inset-0 rounded-full bg-primary animate-ping opacity-75'/>}
                                 </div>
                                 {/* Content */}
-                                <div className={`pl-8 md:pl-0 ${i % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:col-start-2 md:pl-16'}`}>
+                                <div className={`pl-8 md:pl-0 ${i % 2 === 0 ? 'md:pr-16 ' : 'md:col-start-2 md:pl-16'}`}>
                                     <div className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}>
                                         <span className='text-sm font-medium text-primary'>{experience.period}</span>
                                         <h3 className='text-xl font-semibold mt-2'>{experience.role}</h3>
