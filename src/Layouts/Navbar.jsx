@@ -49,7 +49,9 @@ const Navbar = () => {
 
         {/* Call to action button */}
         <div className="hidden md:block ">
-          <Button size="sm">Contact Me</Button>
+          <a href="#contact">
+            <Button size="sm">Contact Me</Button>
+          </a>
         </div>
 
         {/* Mobile menu button */}

@@ -1,3 +1,4 @@
+import { Footer } from "../../react-tailwind-personal-portfolio/src/layout/Footer"
 import Navbar from "./Layouts/Navbar"
 import About from "./Sections/About"
 import Contact from "./Sections/Contact"
@@ -18,8 +19,10 @@ function App() {
         <Projects />
         <Experience />
         <Testimonials />
-        {/* <Contact /> */}
+        <Contact />
       </main>
+
+      <Footer />
     </div>
   )
 }

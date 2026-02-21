@@ -79,13 +79,17 @@ const Hero = () => {
             </div>
             {/* Call to actions  */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
+              <a href="#contact">
+                <Button size="lg">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
+              </a>
+              <a href="/Asad_Web.pdf" download target="_blank">
+                <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
                 Download CV
               </AnimatedBorderButton>
+              </a>
             </div>
             {/* Social links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400 ">
@@ -97,7 +101,7 @@ const Hero = () => {
                   href: "https://www.linkedin.com/in/asad-chowdhury-951b37318/",
                 },
               ].map((social, i) => (
-                <a key={i} href={social.href} className="p-2 rounded-full glass hover:bg-promary/10 hover:text-primary transition-all duration-300">
+                <a key={i} href={social.href} target="_blank" className="p-2 rounded-full glass hover:bg-promary/10 hover:text-primary transition-all duration-300">
                   {<social.icon className="w-5 h-5" />}
                 </a>
               ))}
