@@ -13,7 +13,7 @@ const footerLinks = [
   { href: "#contact", label: "Contact" },
 ];
 
-export const Footer = () => {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -23,7 +23,7 @@ export const Footer = () => {
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
             <a href="#" className="text-xl font-bold tracking-tight">
-              PM<span className="text-primary">.</span>
+              AC<span className="text-primary">.</span>
             </a>
             <p className="text-sm text-muted-foreground mt-2">
               © {currentYear} Pedro Machado. All rights reserved.
@@ -61,3 +61,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;
