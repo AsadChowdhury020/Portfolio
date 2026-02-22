@@ -3,20 +3,6 @@ import Button from "../Components/Button";
 import { ArrowRight, ChevronDown, Download, Github, Linkedin } from "lucide-react";
 import { AnimatedBorderButton } from "../Components/AnimatedBorderButton";
 
-const skills = [
-  "React",
-  "JavaScript (ES6+)",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "Firebase Auth",
-  "JWT",
-  "REST APIs",
-  "Tailwind CSS",
-  "Stripe",
-  "Git & GitHub",
-  "Vercel"
-];
 
 const Hero = () => {
   return (
@@ -129,20 +115,6 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-          </div>
-        </div>
-
-        {/* Skills  */}
-        <div className="mt-20 animate-fade-in animation-delay-600">
-          <p className="text-sm text-muted-foreground mb-6 text-center">Technologies I work with</p>
-          <div className="relative overflow-hidden">
-            <div className="flex animate-marquee">
-              {[...skills, ...skills].map((skill, i) => (
-                <div key={i} className="flex-shrink-0 px-8 py-6 ">
-                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{skill}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

@@ -45,6 +45,27 @@ const projects = [
       server: "https://github.com/AsadChowdhury020/UrbanCare-Server", // server repo
     },
   },
+  {
+  title: "SkillConnect – Local Skill Exchange Platform",
+  description:
+    "SkillConnect is an interactive platform that allows users to offer, learn, and exchange skills locally. Built as a React SPA with Firebase authentication, it features skill listings, provider ratings, booking sessions, protected routes, and a clean modern UI.",
+  image: "/Projects/SC.JPG",
+  tags: [
+    "React",
+    "Firebase",
+    "React Router",
+    "Tailwind CSS",
+    "DaisyUI",
+    "Swiper",
+    "Framer Motion",
+    "React Hot Toast"
+  ],
+  link: "https://skillconnect-990ba.web.app/",
+  github: {
+    client: "https://github.com/AsadChowdhury020/Skill-Connect",
+    server: null, 
+  },
+}
 ];
 
 const Projects = () => {
@@ -73,20 +94,6 @@ const Projects = () => {
                     <div className="relative overflow-hidden aspect-video ">
                         <img src={project.image} alt={project.title} className="w-full h-full p-5 rounded-2xl object-cover transition-transform duration-700 group-hover:scale-110 " />
                         <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60" />
-
-                        {/* Overlay links */}
-                        <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ">
-                            <a href={project.link} target="_blank" className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
-                                <ArrowUpRight className="w-5 h-5"/>
-                            </a>
-                            <a href={project.github.client} target="_blank" className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
-                                <Monitor className="w-5 h-5" />
-                            </a>
-                            
-                            <a href={project.github.server} target="_blank" className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
-                                <Server className="w-5 h-5" />
-                            </a>
-                        </div>
                     </div>
 
                     {/* Content */}
@@ -102,6 +109,24 @@ const Projects = () => {
                             ))}
                         </div>
                     </div>
+
+                      {/* Overlay links */}
+                        <div className="p-6 flex gap-4 group-hover:opacity-100 transition-opacity duration-300 ">
+                            <a href={project.link} target="_blank" className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
+                                <span className="flex justify-center items-center gap-2">Live Link <ArrowUpRight className="w-5 h-5"/></span>
+                            </a>
+                            <a href={project.github.client} target="_blank" className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
+                              <span className="flex justify-center items-center gap-2">GitHub Link (Client) <Monitor className="w-5 h-5"/></span>
+                            </a>
+                            
+                            {
+                              project.github.server && (
+                                <a href={project.github.server} target="_blank" className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
+                                <span className="flex justify-center items-center gap-2">GitHub Link (Server) <Server className="w-5 h-5"/></span>
+                            </a>
+                              )
+                            }
+                        </div>
                 </div>
             ))}
         </div>

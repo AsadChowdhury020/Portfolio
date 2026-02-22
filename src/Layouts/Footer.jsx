@@ -3,7 +3,7 @@ import { Github, Linkedin, Twitter, Heart } from "lucide-react";
 const socialLinks = [
   { icon: Github, href: "#", label: "GitHub" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  // { icon: Twitter, href: "#", label: "Twitter" }
 ];
 
 const footerLinks = [
@@ -11,6 +11,7 @@ const footerLinks = [
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" },
+  { href: "#education", label: "Education" },
 ];
 
 const Footer = () => {
@@ -26,7 +27,7 @@ const Footer = () => {
               AC<span className="text-primary">.</span>
             </a>
             <p className="text-sm text-muted-foreground mt-2">
-              © {currentYear} Pedro Machado. All rights reserved.
+              © {currentYear} Asad Chowdhury. All rights reserved.
             </p>
           </div>
 
